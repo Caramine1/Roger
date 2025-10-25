@@ -1,0 +1,137 @@
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+ 
+ 
+ /* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  color: #f5ecff;
+  background: radial-gradient(circle at top, #1a0028 0%, #0e0016 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Poem container */
+.poem-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #e8d1ff;
+  margin-bottom: 0.3rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #b49ed4;
+  margin-bottom: 2rem;
+}
+
+.poem p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #f7eaff;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #bca9d6;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stars animation */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .poem-container {
+    padding: 1.5rem 0.8rem;
+  }
+  .poem p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+} 
+ footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #bca9d6;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #e8d1ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 6px rgba(232, 209, 255, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+ 
+/* Signature fade-in animation */
+@keyframes fadeInSignature {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.9rem;
+  color: #e8d1ff;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  text-align: right;
+  text-shadow: 0 0 8px rgba(232, 209, 255, 0.5);
+  opacity: 0;
+  animation: fadeInSignature 3s ease-out 2s forwards;
+}
+
+
